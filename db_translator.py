@@ -82,3 +82,11 @@ class YandexTranslate(Translator):
             return requests.post(self.LINK_XML, params=self.data).context
         else:
             return requests.post(self.LINK_JSON, params=self.data).json()
+
+
+def translate_de_ru(func):
+    def wrapper(words):
+        de_input = YandexTranslate(words, 'en')
+        ru_output = YandexTranslate(de_input, 'en-ru')
+        return ru_output
+    return wrapper
