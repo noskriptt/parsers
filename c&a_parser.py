@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- encoding: utf-8 -*-
 
-import parser
+from parser import Parser
+from db_translator import YandexTranslate
 import threading
-import db_translator
 
 # Site
 SITE = "http://www.c-and-a.com/de/de/shop/index.html"
@@ -15,4 +15,4 @@ SUBMENU_ITEMS = ['div#navileft', 'ul.level1', 'span']
 
 
 def main():
-    pass
+    our_site = Parser(SITE)
