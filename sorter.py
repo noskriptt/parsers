@@ -70,3 +70,10 @@ def select_sort(a):
 			for l in range(min,j-1,-1):
 				a[l] = a[l-1]
 			a[j]= value
+
+def qsort(a):
+	""" Реализация быстрой сортировки массива"""
+	if a: return qsort(filter(lambda x: x<a[0], a[1:]))+a[0:1]+qsort(filter(lambda x: x>=a[0],a[1:]))
+	return []
+
+
