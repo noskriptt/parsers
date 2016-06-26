@@ -17,10 +17,6 @@ class Parser(object):
         super(Parser, self).__init__()
         self.siteUrl = url
         self.siteHTML = fromstring(urlopen(self.siteUrl).read())
-        if len(args) != 0:
-            self.args = args
-        if len(kwargs) != 0:
-            self.kwargs = kwargs
 
     def category_menu_parse(self, items):
         ''' Out format dict ('category' : 'link') '''
