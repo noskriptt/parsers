@@ -19,7 +19,14 @@ class Parser(object):
         self.siteHTML = fromstring(urlopen(self.siteUrl).read())
 
     def category_menu_parse(self, items):
-        ''' Out format dict ('category' : 'link') '''
+        """
+        Function: category_menu_parse
+        Summary: Get level 1 menu
+        Examples: Parser.category_menu_parse()
+        Attributes: 
+            @param (items): list tags css
+        Returns: dict('category':'link')
+        """
         catalog_menu = {}
 
         return catalog_menu
@@ -33,16 +40,22 @@ class Parser(object):
     def producs_in_categories(self):
         pass
 
-    def product_name(self, *items):
-        """ Parse product with price, images and configuration """
-        product_NAs = []
+    def product(self):
+        pass
 
-        return product_NAs
+    def product_name(self):
+        pass
 
     def product_price(self):
+        """ Получаем цену на товар """
         pass
 
     def product_details(self):
+        """ Получаем данные о характеристиках товара, если они есть"""
+        pass
+
+    def produc_materials(self):
+        """ Получаем данные о материалах продукта, если они есть"""
         pass
 
 
